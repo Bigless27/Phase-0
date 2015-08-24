@@ -1,7 +1,7 @@
 ## 4. Open Source and Repo Setup Reflection
 
- ####- Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
-To create a repository all you need to do is click on the + icon next to your profile picutre on Github.com and select create repository. To clone the repository you need to locate the SSH clone URL which is on the right side of the repositories page when you open it. Highlight the url and copy it. Next open up terminal and change the directory to the location you want to clone your repository to. Finally, type in "git clone (SSH URL)" and there you go!
+####- Explain how to create a repository on GitHub and clone the repository to your local computer to a non-technical person.
+	To create a repository all you need to do is click on the + icon next to your profile picutre on Github.com and select create repository. To clone the repository you need to locate the SSH clone URL which is on the right side of the repositories page when you open it. Highlight the url and copy it. Next open up terminal and change the directory to the location you want to clone your repository to. Finally, type in "git clone (SSH URL)" and there you go!
 
 ####- Describe what open source means.
 	Open source is someones source code which is posted online for anyone to view. Along with viewing, anyone can modify the existing code and try to improve upon the existing code. The existing code is their to be manipulated by other users in a calabrative effort.
