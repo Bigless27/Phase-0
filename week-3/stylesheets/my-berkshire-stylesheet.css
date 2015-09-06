@@ -31,3 +31,27 @@ left:40em
 /*legal*/
 .legal{font-size:xx-small;}
 li label{font-size:x-small;}
+
+/*Reflect
+-It is important to know the relative path for linking an external file to
+your html file. If the path is wrong then your links content
+wont be applied to you html document.
+-What helped me positioning was putting both the columns in a container
+and using absolute positioning to the relative positioning of the  container. This made it 
+possible for me to position my content correctly. It took me over four hours
+to position the website how I wanted it.
+-To modify the elements I used pseudo link styling, font-size,font-family,
+color, and I used border.
+-I did not use any ID's but I used a lot of classes. I used all classes because
+they were easier for me to identify in my css document, this was because I am 
+use to the .(class name) selector. If I didn't use classes or ID's I would 
+know not to use ID's because of complications explained in the videos relevant
+to this week. Summing up what they explained was that you should't use
+more than one ID, but you can use multiple classes.
+-My coding of the Berkshire Hathaway website followed more best practice than
+the original website because I had my html document linked to a css. The original
+website has css styling included in the header and inline with the html. This may
+be time consuming when editing the css for multiple objects. 
+*/
+
+
