@@ -1,0 +1,33 @@
+.B {font-size: 3em; color:#000080;}
+.H{font-size: 3em; color: #000080;}
+p {color:#000080;}
+
+/*links*/
+a:visited{color: #ff0000;}
+a{color:#800080;}
+.center-title{text-align: center;}
+
+/*positioning*/
+.container{position:relative;}
+.first-coloum{position:absolute;
+}
+.second-coloum{position:relative;
+left:40em
+;}
+
+/*geico*/
+.geico{text-align: center;}
+.smaller-g{font-size: x-small}
+
+/*lines*/
+.first-line {border-bottom: 1px solid black; height:1px; width:100%;}
+.second-line{border-bottom: 1px solid black; height:1px; width:100%;}
+.third-line{border-bottom: 1px solid black; height:1px; width:100%;}
+.fourth-line{border-bottom: 1px solid black; height:1px; width:100%;}
+
+/*comments*/
+.comments{font-size:small;}
+
+/*legal*/
+.legal{font-size:xx-small;}
+li label{font-size:x-small;}
