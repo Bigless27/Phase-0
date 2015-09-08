@@ -1,0 +1,7 @@
+header {background-color: green; border: 2px solid black; text-align: center;font-family:cursive; color: white; }
+
+
+.column-1 {background-color: red;border: 2px dotted black;float: left; width:49%; padding-top: 1em;}
+
+.column-2 {background-color: orange; border:2px solid black; float:right; width:50%; font-family: Verdana;text-align: center; }
+footer {clear:both;background-color: blue; border:2px dashed black; color: #a8a8a8;}
