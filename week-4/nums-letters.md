@@ -21,8 +21,8 @@ puts math, math2
   -Local variables are variables that you assign in your document that are only available there. You can use local variables to save elements for later use. I would use a variable to assign an equation to so I can keep the original equation while modifying it.
   -This challenge was rather easy for me due to my prior experience in Python. I got a great review of all of the basics of Ruby.
 </p>
-<a href="https://github.com/Bigless27/Phase-0/blob/master/week-4/basic-math.rb"> Basic Math</a>
-<a href="https://github.com/Bigless27/Phase-0/blob/master/week-4/simple-string.rb"> Simple string</a>
+<a href="https://github.com/Bigless27/Phase-0/blob/master/week-4/basic-math.rb"> Basic Math</a><br>
+<a href="https://github.com/Bigless27/Phase-0/blob/master/week-4/simple-string.rb"> Simple string</a><br>
 <a href="https://github.com/Bigless27/Phase-0/blob/master/week-4/defining-variables.rb">Defining Variables</a>
 
 
