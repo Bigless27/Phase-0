@@ -86,8 +86,10 @@ end
 
 
 # This method was extremely hard to figure out. The reason being is that most methods that check if an character is in an element only work for strings. As you can see in this array there are integers to. I could account for this in a non-destructive way but I can only think of one way to do it destructively.
-#For my method above I used the delete_if method and pointed each element itterated through it to a ceratin index. Since ever element that has an "a" in it has it in the same place this works.
-#This also accounts for the integers. Since the integers dont have a [1] index it returns nill. This can be compared in the delete_if code block.
+#All methods I tried would give me errors for this so I wrote code with an each method that adds items to a new array. If the element that is being itterated through includes the character we specified then it wont be added to the new array we are printing
+#This also accounts for number because it automatically adds them to the new array
+
+
 
 
 
