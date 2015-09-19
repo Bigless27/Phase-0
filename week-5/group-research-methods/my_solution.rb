@@ -6,13 +6,23 @@ i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
 my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
 
 # Person 1's solution
-def my_array_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+
+def my_array_finding_method(array, letter)
+  array.select do |x|
+   x if x.class == String && x.include?(letter)
+ end
 end
 
-def my_hash_finding_method(source, thing_to_find)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+def my_hash_finding_method(hash, num)
+  new_array = []
+    hash.each do |key, value|
+     new_array << key if value == num
+   end
+  new_array
 end
+
+
+
 
 # Identify and describe the Ruby method(s) you implemented.
 #
@@ -21,11 +31,19 @@ end
 
 # Person 2
 def my_array_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.map! do |element|
+    if element.class == Fixnum
+      element += thing_to_modify
+    else
+      element = element
+    end
+  end
 end
 
 def my_hash_modification_method!(source, thing_to_modify)
-  source.dup # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+  source.each do |key, value|
+    source[key] += thing_to_modify
+  end
 end
 
 # Identify and describe the Ruby method(s) you implemented.
@@ -35,12 +53,12 @@ end
 
 
 # Person 3
-def my_array_sorting_method(source)
-  source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+def my_array_sorting_method(array)
+  return array.sort_by {|x| x.to_s}
 end
 
-def my_hash_sorting_method(source)
-   source # This line is here to make sure all tests initially fail. Delete it when you begin coding.
+def my_hash_sorting_method(my_family_pets_ages)
+  my_family_pets_ages.sort_by {|key,val| val}
 end
 
 # Identify and describe the Ruby method(s) you implemented.
