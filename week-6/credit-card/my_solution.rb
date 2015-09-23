@@ -18,13 +18,21 @@
 
 class CreditCard
 
-  attr_accessor :total
+ lass CreditCard
+  attr_reader :sum
 
   def initialize(creditcard)
     @creditcard = creditcard
     raise ArgumentError.new "Your credit card number is too short!" if      creditcard.to_s.length != 16
   end
 
+  def check_card
+    if @total % 10 == 0
+      return true
+    else
+      return false
+    end
+  end
 
   def card_double
     @digits = @creditcard.to_s.split("")
@@ -47,17 +55,6 @@ class CreditCard
       end
     }
     @total = split_digits.flatten!.inject {|x, sum| x += sum }
-  end
-
-def check_card
-
-
-
-    if @total % 10 == 0
-     return true
-     else
-       return false
-     end
   end
 end
 
