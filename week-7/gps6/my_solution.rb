@@ -1,29 +1,33 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Nathan Park].
+# We spent [1] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+#For the file that the require_relative is defined on, It makes available all content on the file it references.
+#Require_relative defines a path for ruby to find the file it references, relative to the file that require_relative is being defined on. Require starts at the beginning of you computers home file and needs an explicit path.
+
 require_relative 'state_data'
 
 class VirusPredictor
 
+  #Defines the parameters that will be passed into the class and then defines these parameters as instance variables.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+  #Calls upon two methods with the instance variables put in as the parameters of the methods.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
-  def predicted_deaths(population_density, population, state)
+  #Takes the hash values from STATE_DATA and inputs them into this method as parameters. Runs flow control on the parameters to determine what type of operations to run on that specified parameter. Finally, it prints out a statement. Predicts number of deaths.
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,25 +45,25 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  #Takes the initialized values and runs flow control on them. The methods uses a specified type of operation depending on what if statement returns true. Prints the data. Predicts speed of spread.
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+
 
     if @population_density >= 200
-      speed += 0.5
+      speed = 0.5
     elsif @population_density >= 150
-      speed += 1
+      speed = 1
     elsif @population_density >= 100
-      speed += 1.5
+      speed = 1.5
     elsif @population_density >= 50
-      speed += 2
+      speed = 2
     else
-      speed += 2.5
+      speed = 2.5
     end
 
     puts " and will spread across the state in #{speed} months.\n\n"
-
 
   end
 
@@ -84,6 +88,18 @@ alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density],
 alaska.virus_effects
 
 
+STATE_DATA.keys.each do |state_name|
+  display = VirusPredictor.new(state_name,STATE_DATA[state_name][:population_density],STATE_DATA[state_name][:population])
+  display.virus_effects
+end
+
+
 
 #=======================================================================
 # Reflection Section
+#-The differences between the two hashes in the state_data file are defined using two different methods. One key is defined using a string and =>. The other key is defined using a symbol.
+#-For the file that the require_relative is defined on, It makes available all content on the file it references.
+#Require_relative defines a path for ruby to find the file it references, relative to the file that require_relative is being defined on. Require starts at the beginning of you computers home file and needs an explicit path.
+#-Ways to itterate through a hash are each,and map.
+#-What stood out to me in the virus_effects method is that we were passing arguments into methods that weren't referencing those parameters but the instance variables defined in the initializer.
+#-The concept I most solidified in this challenge was variable scope.
