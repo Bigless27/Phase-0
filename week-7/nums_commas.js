@@ -49,25 +49,3 @@ comma(543523452)
 //-The difference was translating ruby methods into JavaScript or in one case finding a method in JavaScript that helps solve the problem with a method Ruby doesn't have.
 //-Again, I found the Splice method to be pretty effective in solving this solution.
 
-
-
-
-
-
-
-
-
-
-function separateCommas(number) {
-  var flip=number.toString().split("").reverse();
-  var x=3;
-  while (x<flip.length){flip.splice(x,0,",")
-    x+=4;
-}
-  return  flip.reverse().join("");
-
-}
-
-
-// Your Own Tests (OPTIONAL)
-console.log(separateCommas(1000000000))
