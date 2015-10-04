@@ -1,5 +1,5 @@
-//chapter 2//
-//
+// chapter 2//
+
 var ryan="hello"
 console.log(ryan);
 
@@ -20,4 +20,18 @@ for (var fizzbuzz=0; fizzbuzz < 101; fizzbuzz ++){
   console.log(output || fizzbuzz);
 }
 
-//
+//Chapter 3
+//Minimum
+function minimum(x,y){
+  if (x<y)
+    return x;
+  else
+    return y;
+};
+
+console.log(minimum(20,25))
+
+// Chapter 4
+var me= [{name:"Ryan"},{food: ["Protien-Shake","Protein-Shake","Protein-Shake"]},{quirk: "I like to play basketball"}]
+
+console.log(me)
