@@ -80,6 +80,9 @@ def mode(text)
 end
 
 
+
+
+
 # 4. Reflection
 # My pair and I decided to use hashes and array in our code. We also used empty arrays to use as counters. These counters were also uses for comparisons.
 #We were a lot more successful at breaking this code down in pseudocode. I felt that we had more clearly defined steps in this challenge than in last weeks

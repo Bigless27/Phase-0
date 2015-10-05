@@ -35,3 +35,10 @@ console.log(minimum(20,25))
 var me= [{name:"Ryan"},{food: ["Protien-Shake","Protein-Shake","Protein-Shake"]},{quirk: "I like to play basketball"}]
 
 console.log(me)
+
+
+
+var test=[2,3,4]
+for (i in test){
+  console.log(test[i])
+};
