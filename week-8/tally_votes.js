@@ -63,54 +63,88 @@ var officers = {
 }
 
 // Pseudocode
+//President in vote count needs a key value pair of "BOB" which is equal to three which is the number of votes talled for him
+//Repeat the above for vicePresident, secretary, treasurer.
+//for officers, we need to declare the winners for each position.
 
+//Steps:
+//-Take the key and value pairs for each position in the votes variable and assign it to each key in the voteCount variable.
+//-use a for loop to itterate through each position and use a +=1 to add the votes for each key in the variable voteCount
+//-to display the winners, iterate through the voteCount objects to grab president, vp, secrectary, treasurer properties
+//- then go through 2nd iteration to grab number of votes
+//- create conditional and set a var to 0
+//    - where we iterate through votes, as iteration progresses the var is set to the highest number as it passes along
+//tally who the winner is and then add that winner as a property of the specifed object in the variable officers
 
 // __________________________________________
 // Initial Solution
 
+// for (var voters in votes){
+//   voteCount.president[votes[voters].president]=0;
+//   voteCount.vicePresident[votes[voters].vicePresident]=0;
+//   voteCount.secretary[votes[voters].secretary]=0;
+//   voteCount.treasurer[votes[voters].treasurer]=0;
+// }
 
-//Creat the instance of name in the voteCount variable
-//Next tally up all the votes for each person in each name
-for (i in votes) {
-  voteCount.president[votes[i].president] = 0;
-  voteCount.vicePresident[votes[i].vicePresident] = 0;
-  voteCount.secretary[votes[i].secretary] = 0;
-  voteCount.treasurer[votes[i].treasurer] = 0;
-}
-
-for (i in votes) {
-  voteCount.president[votes[i].president] += 1;
-  voteCount.vicePresident[votes[i].vicePresident] += 1;
-  voteCount.secretary[votes[i].secretary] += 1;
-  voteCount.treasurer[votes[i].treasurer] += 1;
-}
-
-//Display the results
-//Double iterate with the two for statements to be able to access the keys and the values of the nominees and the vote total.
-for (position in voteCount) {
-  var mostVotes = 0;
-  var winner = null;
-
-  for (candidate in voteCount[position]) {
-
-    if (voteCount[position][candidate] > mostVotes) {
-      mostVotes = voteCount[position][candidate];
-      winner = candidate;
-
-    }
-  }
-  officers[position] = winner;
-}
-console.log(officers)
+// for (var count in votes){
+//   voteCount.president[votes[count].president]+=1;
+//   voteCount.vicePresident[votes[count].vicePresident]+=1;
+//   voteCount.secretary[votes[count].secretary]+=1;
+//   voteCount.treasurer[votes[count].treasurer]+=1;
+// }
 
 
+// //display the winners in the officers variable
 
+// var winner = null;
+// var leader = 0;
 
+// // first for loop takes office (e.g. president) in voteCount
+// for(var property in voteCount){
+//
+// // 2nd for loop: value from key (will print out vote numbers)
+//   for(var value in voteCount[property]){
+//     (voteCount[property][value])
+//     // grabs highest value as it passes along and sets leader to highest value and winner grabs the name
+//     if (voteCount[property][value] > leader){
+//       leader = voteCount[property][value]; // takes value(key) and returns it's contents (:value)
+//       winner = value; // value, alone, is the name
+//     };
+//   };
+//   officers[property] = winner;
+// };
 
 // __________________________________________
 // Refactored Solution
 
+for (var voters in votes){
+  voteCount.president[votes[voters].president]=0;
+  voteCount.vicePresident[votes[voters].vicePresident]=0;
+  voteCount.secretary[votes[voters].secretary]=0;
+  voteCount.treasurer[votes[voters].treasurer]=0;
+}
 
+for (var count in votes){
+  voteCount.president[votes[count].president]+=1;
+  voteCount.vicePresident[votes[count].vicePresident]+=1;
+  voteCount.secretary[votes[count].secretary]+=1;
+  voteCount.treasurer[votes[count].treasurer]+=1;
+}
+
+
+for(var property in voteCount){
+// set variables inside first for loop, but outside second.  If outside it only compares largest value overall (Fred will repeat).
+  var winner = null;
+  var leader = 0;
+  for(var value in voteCount[property]){
+    (voteCount[property][value])
+    if (voteCount[property][value] > leader){
+      leader = voteCount[property][value];
+      winner = value;
+    };
+  };
+  officers[property] = winner;
+};
 
 
 
@@ -183,3 +217,6 @@ assert(
   "Ivy should be elected Treasurer.",
   "8. "
 )
+
+
+
