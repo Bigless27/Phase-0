@@ -151,7 +151,9 @@ for(var property in voteCount){
 
 // __________________________________________
 // Reflection
-
+/*What I learned about iterating over a nested object in JavaScript is that you first of need to know what and how to access the nested objects. I also learned that you can be very specific in adding objects and properties in certain places.*/
+/*I wouldn't say that I learned any useful methods, but I furtherd my knowledge greatly on adding objects to properties and accessing nested objects.*/
+/*What I solidified during this challenge is a better understanding of variable scope with low control. We struggled for a while trying to figure out the right scope for out variable in certain objects and how they affect a control flow sequence.*/
 
 
 
