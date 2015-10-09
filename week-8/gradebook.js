@@ -91,6 +91,11 @@ function average(scores){
 
 // __________________________________________
 // Reflect
+/*-What I learned about assigning function to objects in JavaScript is that it can do the work of a constructior function. Also, it looks a lot DRYER
+*/
+/*-A way I used to itterate over nested arrays in JavaScript is to use a double for loop. In the first for loop I would define a  variable and set it equal to array[i]. "i" is the variable I defined in my first for loop. My second for loop would itterate through that defined varaible so that it will be able to access the values in the nested array*/
+/*There really werent any new methods that I learned, but learned a few new concepts like assigning a function to an object.*/
+
 
 
 
